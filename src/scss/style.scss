@@ -15,14 +15,15 @@ $md3: em(767.98);
 $md4: em(479.98);
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Montserrat+Subrayada:regular,400,600,700&display=swap");
+@import "base/fonts.scss";
 // Colors
 $mainColor: #fff;
 
 body {
     background-color: $mainColor;
     font-size: $fontSize;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lisboa';
+    font-weight: bold;
 }
 
 // Container
