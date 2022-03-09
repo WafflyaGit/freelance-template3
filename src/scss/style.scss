@@ -4,49 +4,58 @@
 @import "base/mixins.scss";
 
 // Variables
-$containerMaxWidth: 1100px;
-$containerPadding: 30px;
+$containerMaxWidth: 1195;
+$containerPadding: 30;
 $fontSize: rem(16);
 
 // Breakpoints
-$md1: em($containerMaxWidth + $containerPadding);
-$md2: em(991.98);
-$md3: em(767.98);
-$md4: em(479.98);
+$md1: rem($containerMaxWidth + $containerPadding);
+$md2: rem(991.98);
+$md3: rem(767.98);
+$md4: rem(479.98);
 
 // Fonts
 @import "base/fonts.scss";
+
 // Colors
-$mainColor: #fff;
+$white: white;
+$black: #2B2B2B;
+$green: #00D254;
+$gray: #EDEDED;
+$gray2: #B5B5B5;
 
 body {
-    background-color: $mainColor;
     font-size: $fontSize;
-    font-family: 'Lisboa';
-    font-weight: bold;
+    font-family: 'FS Elliot Pro';
+    background-color: $white;
+    font-weight: normal;
+    color: $black;
+}
+* {
+    outline-color: $green;
 }
 
 // Container
 [class*='__container'] {
-    max-width: $containerMaxWidth;
+    max-width: rem($containerMaxWidth);
     margin: 0 auto;
-    padding: $containerPadding;
+    padding: rem($containerPadding);
     @media (max-width: $md1) {
-        max-width: 970px;
+        padding: rem(15);
     }
     @media (max-width: $md2) {
-        max-width: 750px;
+        padding: rem(15);
     }
     @media (max-width: $md3) {
         max-width: none;
-        padding: 0 15px;
+        padding: 0 rem(15);
     }
 }
 
 @import "_header.scss";
 @import "main.scss";
 @import "_footer.scss";
-@import "_icons.scss";
+//@import "_icons.scss";
 
 // Plugins
 //@import "base/accordions.scss";

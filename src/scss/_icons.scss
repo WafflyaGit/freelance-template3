@@ -27,11 +27,59 @@
 @function _icon-char($filename) {
 	$char: "";
 
-	@if $filename == star-off {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == star-on {
+	@if $filename == arrows {
 		$char: "\E002";
+	}
+	@if $filename == card-play {
+		$char: "\E003";
+	}
+	@if $filename == card-search {
+		$char: "\E004";
+	}
+	@if $filename == card-settings {
+		$char: "\E005";
+	}
+	@if $filename == diploma {
+		$char: "\E006";
+	}
+	@if $filename == facebook {
+		$char: "\E007";
+	}
+	@if $filename == instagram {
+		$char: "\E008";
+	}
+	@if $filename == level {
+		$char: "\E009";
+	}
+	@if $filename == schedule {
+		$char: "\E00A";
+	}
+	@if $filename == search {
+		$char: "\E00B";
+	}
+	@if $filename == shuffle {
+		$char: "\E00C";
+	}
+	@if $filename == star {
+		$char: "\E00D";
+	}
+	@if $filename == suitcase {
+		$char: "\E00E";
+	}
+	@if $filename == telegram {
+		$char: "\E00F";
+	}
+	@if $filename == time {
+		$char: "\E010";
+	}
+	@if $filename == vk {
+		$char: "\E011";
+	}
+	@if $filename == youtube {
+		$char: "\E012";
 	}
 
 	@return $char;
@@ -48,9 +96,57 @@
 	}
 }
 
-._icon-star-off {
-	@include _icon(star-off);
+._icon-arrow {
+	@include _icon(arrow);
 }
-._icon-star-on {
-	@include _icon(star-on);
+._icon-arrows {
+	@include _icon(arrows);
+}
+._icon-card-play {
+	@include _icon(card-play);
+}
+._icon-card-search {
+	@include _icon(card-search);
+}
+._icon-card-settings {
+	@include _icon(card-settings);
+}
+._icon-diploma {
+	@include _icon(diploma);
+}
+._icon-facebook {
+	@include _icon(facebook);
+}
+._icon-instagram {
+	@include _icon(instagram);
+}
+._icon-level {
+	@include _icon(level);
+}
+._icon-schedule {
+	@include _icon(schedule);
+}
+._icon-search {
+	@include _icon(search);
+}
+._icon-shuffle {
+	@include _icon(shuffle);
+}
+._icon-star {
+	@include _icon(star);
+}
+._icon-suitcase {
+	@include _icon(suitcase);
+}
+._icon-telegram {
+	@include _icon(telegram);
+}
+._icon-time {
+	@include _icon(time);
+}
+._icon-vk {
+	@include _icon(vk);
+}
+._icon-youtube {
+	@include _icon(youtube);
 }
