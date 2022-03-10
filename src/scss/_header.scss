@@ -1,6 +1,8 @@
 $headerHeight: rem(70);
 
 .header {
+    z-index: 1;
+    background-color: $white;
     &__container {
         height: $headerHeight;
         display: flex;
@@ -48,7 +50,7 @@ $headerHeight: rem(70);
             @media (max-width: $md2) {
                 justify-content: flex-end;
             }
-            .menu__item:last-child {
+            .menu__item:nth-child(2) {
                 @media (min-width: $md2) {
                     flex-grow: 3;
                 }
@@ -102,6 +104,18 @@ $headerHeight: rem(70);
             width: 100%;
             position: relative;
             margin-left: rem(2);
+            @media (max-width: $md2) {
+                z-index: -1;
+                position: fixed;
+                top: -$headerHeight;
+                left: 0;
+                background-color: $white;
+                padding-right: rem(30);
+                transition: top ease-out .3s;
+                &.active {
+                    top: $headerHeight;
+                }
+            }
             input {
                 height: 100%;
                 width: 100%;
@@ -114,11 +128,11 @@ $headerHeight: rem(70);
                 line-height: rem(19);
                 border-right: rem(1) solid $gray;
                 color: $black;
-                @media (max-width: $md2) {
-                    display: none;
-                }
                 &::placeholder {
                     color: $gray2;
+                }
+                @media (max-width: $md2) {
+                    border: none;
                 }
             }
             button {
@@ -129,28 +143,14 @@ $headerHeight: rem(70);
                 padding: 0 rem(28);
                 border: none;
                 background: transparent;
-                @media (max-width: $md2) {
-                    position: relative;
-                    height: $headerHeight;
-                    width: $headerHeight;
-                    padding: rem(20) rem(20);
-                    width: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    svg {
-                        path {
-                            fill: $black;
-                        }
-                    }
-                }
-                @media (max-width: $md3) {
-                    width: rem(40);
-                    padding: 0;
-                }
             }
         }
-        &__btn {
+        &__cross {
+            @media (min-width: $md2) {
+                display: none;
+            }
+        }
+        &__btn-burger {
             display: none;
             width: rem(40);
             height: $headerHeight;
@@ -193,6 +193,30 @@ $headerHeight: rem(70);
                 }
             }
         
+        }
+        &__btn-search {
+            display: none;
+            border: none;
+            background-color: transparent;
+            position: relative;
+            height: $headerHeight;
+            width: $headerHeight;
+            padding: rem(20) rem(20);
+            width: auto;
+            justify-content: center;
+            align-items: center;
+            svg {
+                path {
+                    fill: $black;
+                }
+            }
+            @media (max-width: $md2) {
+                display: flex;
+            }
+            @media (max-width: $md3) {
+                width: rem(40);
+                padding: 0;
+            }
         }
     }
 }

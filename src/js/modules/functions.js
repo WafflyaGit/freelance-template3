@@ -18,6 +18,13 @@ export const menu = () => {
         document.querySelector('[menu-list]').classList.toggle('active');
         document.querySelector('[menu-btn]').classList.toggle('active');
     })
+
+    document.querySelectorAll('[search-btn]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelector('[search]').classList.toggle('active');
+            e.preventDefault();
+        })
+    })
 }
 
 export const accordions = () => {
