@@ -1,0 +1,24 @@
+main {
+    flex: 1;
+}
+.section {
+    padding: rem(20) 0;
+    @media (max-width: $md2) {
+        padding: rem(50) 0;
+    }
+    @media (max-width: $md3) {
+        padding: rem(40) 0;
+    }
+    &-gray {
+        background-color: $gray4;
+    }
+    &__title {
+        font-family: 'Lisboa';
+        font-style: normal;
+        font-weight: 900;
+        font-size: rem(30);
+        line-height: rem(39);
+        @include fluid(margin-bottom, rem(50), rem(72), $md3, $md1);
+        text-align: center;
+    }
+}

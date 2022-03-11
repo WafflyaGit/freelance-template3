@@ -1,0 +1,67 @@
+.footer {
+    background-color: #000000;
+    &__content {
+        padding: rem(50);
+        border-bottom: rem(1) solid $gray3;
+        .footer__menu {
+            display: grid;
+            gap: rem(60);
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            .menu {
+                &__item {
+                    .item {
+                        &__list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: rem(10);
+                        }
+                        &__title {
+                            font-family: 'FS Elliot Pro';
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: rem(12);
+                            line-height: rem(16);
+                            letter-spacing: .2em;
+                            color: #FFFFFF;
+                            text-transform: uppercase;
+                            white-space: nowrap;
+                        }
+                        &__link {
+                            white-space: nowrap;
+                            font-family: 'FS Elliot Pro';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(12);
+                            line-height: rem(16);
+                            letter-spacing: rem(0.2);
+                            color: #FFFFFF;
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__footer {
+        .footer__container {
+            padding: 0 rem($containerPadding);
+            height: rem(56);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__logo {
+        font-family: 'FS Elliot Pro';
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(14);
+        line-height: rem(15);
+        color: $white;
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+    }
+}

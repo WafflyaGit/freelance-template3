@@ -1,0 +1,65 @@
+.main-section {
+    display: flex;
+    @media (max-width: $md3) {
+        flex-direction: column;
+    }
+    &__content {
+        overflow: hidden;
+        @include fluid(padding-top, rem(60), rem(150), $md3, $md1);
+        @include fluid(padding-bottom, rem(60), rem(150), $md3, $md1);
+        @media (max-width: $md3) {
+            padding: rem(10) 0;
+        }
+        @media (min-width: $md3) {
+            flex: 0 0 100%;
+        }
+    }
+    &__body {
+        @media (min-width: $md3) {
+            width: 50%;
+        }
+    }
+    &__title {
+        font-family: 'Lisboa';
+        font-weight: 900;
+        @include fluid(font-size, rem(26), rem(36), $md4, $md3);
+        line-height: rem(47);
+        color: $black;
+        margin-bottom: rem(30);
+        @media (max-width: $md3) {
+            margin-bottom: rem(10);
+        }
+    }
+    &__description {
+        font-family: 'FS Elliot Pro';
+        font-weight: normal;
+        @include fluid(font-size, rem(14), rem(18), $md4, $md1);
+        line-height: rem(30);
+        color: $black;
+    }
+    &__img {
+        @media (min-width: $md3) {
+            position: relative;
+            overflow-y: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: left top;
+            }
+            flex: 0 0 50%;
+            transform: translate(-100%, 0);
+        }
+        @media (max-width: $md3) {
+            display: flex;
+            justify-content: flex-end;
+            img {
+                height: rem(230);
+            }
+            width: 100%;
+        }
+    }
+}

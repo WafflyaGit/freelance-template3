@@ -3,6 +3,7 @@ $headerHeight: rem(70);
 .header {
     z-index: 1;
     background-color: $white;
+    border-bottom: 1px solid $gray;
     &__container {
         height: $headerHeight;
         display: flex;

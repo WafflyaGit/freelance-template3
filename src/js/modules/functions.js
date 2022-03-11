@@ -119,3 +119,37 @@ export const ranges = () => {
         fill();
     })
 }
+
+export const tabs = () => {
+    document.querySelectorAll('[tabs]').forEach(tab => {
+        const menus = tab.querySelectorAll('[data-for]');
+        const tabs = tab.querySelectorAll('[data-tab]');
+
+        menus.forEach(menu_item => {
+            if (menu_item.classList.contains('active')) {
+                tabs.forEach(tab_item => {
+                    tab_item.hidden = !(menu_item.dataset.for === tab_item.dataset.tab);
+                })
+            }
+        })
+
+        menus.forEach(menu => {
+            menu.addEventListener('click', () => {
+                menus.forEach(menu_item => {
+                    if (menu_item === menu) {
+                        menu.classList.add('active');
+                    } else {
+                        menu_item.classList.remove('active');
+                    }
+                })
+                tabs.forEach(tab_item => {
+                    if (tab_item.dataset.tab === menu.dataset.for) {
+                        tab_item.hidden = false;
+                    } else {
+                        tab_item.hidden = true;
+                    }
+                })
+            })
+        })
+    })
+}

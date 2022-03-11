@@ -14,3 +14,5 @@ functions.menu();
 
 // Ranges
 //functions.ranges();
+
+functions.tabs();

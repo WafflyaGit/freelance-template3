@@ -1,12 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('html/_head.html', {
-        "title": "Home"
-    })
+@@include('html/_head.html', {
+"title": "Home"
+})
+
 <body>
     @@include('html/_header.html', {})
-    <main class="main__container"></main>
+    <main>
+        <!-- MAIN SECTION -->
+        <section class="main-section section-gray">
+            <div class="main-section__content">
+                <div class="main-section__container">
+                    <div class="main-section__body">
+                        <h1 class="main-section__title">Агрегатор онлайн-курсов</h1>
+                        <div class="main-section__description">
+                            Сравниваем онлайн-курсы по digital и IT. Мы — каталог-отзовик курсов. Выбирайте курсы по
+                            отзывам, цене, продолжительности и другим критериям!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-section__img">
+                <img src="@img/cover.svg" alt="Cover">
+            </div>
+        </section>
+        <!-- BENEFITS SECTION -->
+        <section class="benefits-section section">
+            <div class="benefits-section__container">
+                <h2 class="section__title">Наши преимущества</h2>
+                <div class="benefits-section__cards">
+                    <div class="benefits-section_card card">
+                        <div class="card__header">
+                            <div class="card__icon">
+                                <svg width="60" height="50" viewBox="0 0 60 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.27344 49.5094H54.7266C57.6343 49.5094 60 47.1533 60 44.2574V5.74272C60 2.84677 57.6343 0.490723 54.7266 0.490723H5.27344C2.36566 0.490723 0 2.84677 0 5.74272V44.2574C0 47.1533 2.36566 49.5094 5.27344 49.5094ZM3.51562 5.74272C3.51562 4.77741 4.30418 3.99206 5.27344 3.99206H54.7266C55.6958 3.99206 56.4844 4.77741 56.4844 5.74272V44.2574C56.4844 45.2227 55.6958 46.0081 54.7266 46.0081H5.27344C4.30418 46.0081 3.51562 45.2227 3.51562 44.2574V5.74272Z"
+                                        fill="#01E45C" />
+                                    <path
+                                        d="M8.78906 39.0054H10.9664C11.692 41.0429 13.6459 42.5067 15.9375 42.5067C18.2291 42.5067 20.183 41.0429 20.9086 39.0054H51.2109C52.1817 39.0054 52.9688 38.2215 52.9688 37.2547C52.9688 36.2879 52.1817 35.504 51.2109 35.504H20.9086C20.183 33.4665 18.2291 32.0027 15.9375 32.0027C13.6459 32.0027 11.692 33.4665 10.9664 35.504H8.78906C7.81828 35.504 7.03125 36.2879 7.03125 37.2547C7.03125 38.2215 7.81828 39.0054 8.78906 39.0054ZM15.9375 35.504C16.9068 35.504 17.6953 36.2894 17.6953 37.2547C17.6953 38.22 16.9068 39.0054 15.9375 39.0054C14.9682 39.0054 14.1797 38.22 14.1797 37.2547C14.1797 36.2894 14.9682 35.504 15.9375 35.504Z"
+                                        fill="#2B2B2B" />
+                                    <path
+                                        d="M22.0446 28.24C22.5637 28.5595 23.2111 28.5874 23.7548 28.3166L37.8173 21.314C38.4129 21.0173 38.7891 20.4112 38.7891 19.7481C38.7891 19.0849 38.4129 18.4788 37.8173 18.1821L23.7548 11.1795C23.21 10.9081 22.5628 10.9371 22.0446 11.2562C21.5264 11.5751 21.2109 12.1386 21.2109 12.7454V26.7507C21.2109 27.3575 21.5264 27.921 22.0446 28.24ZM24.7266 15.5781L33.1007 19.7481L24.7266 23.918V15.5781Z"
+                                        fill="#2B2B2B" />
+                                </svg>
+                            </div>
+                            <div class="card__title">Большой выбор <br> онлайн-курсов</div>
+                        </div>
+                        <div class="card__description">
+                            Мы аккумулируем большое количество
+                            онлайн-курсов по различным направлениям,
+                            позволяя сравнивать их, и выбирать то,
+                            что вам нравится
+                        </div>
+                    </div>
+                    <div class="benefits-section_card card">
+                        <div class="card__header">
+                            <div class="card__icon">
+                                <svg width="67" height="50" viewBox="0 0 67 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M64.4205 39.3101L49.6161 24.4837C52.3939 18.1696 51.2053 10.5136 46.0482 5.34891C39.3292 -1.38001 28.4533 -1.38092 21.7335 5.34891C15.0302 12.062 15.0302 22.9851 21.7335 29.6982C27.0603 35.0328 34.8667 36.0485 41.0987 33.1639L55.8275 47.9144C58.2022 50.2925 62.0463 50.2928 64.421 47.9139C66.7892 45.5417 66.7889 41.6821 64.4205 39.3101ZM24.4766 26.9523C19.2851 21.7533 19.2851 13.294 24.4766 8.09483C29.6795 2.88418 38.1012 2.88327 43.3051 8.09483C48.4965 13.294 48.4965 21.7533 43.3051 26.9523C38.102 32.1631 29.6802 32.1639 24.4766 26.9523ZM61.6775 45.1684C60.819 46.0284 59.4293 46.0287 58.5705 45.1685L44.4986 31.0758C45.6553 30.1642 46.6862 29.1174 47.5813 27.9391L61.6773 42.0558C62.5341 42.914 62.5343 44.3102 61.6775 45.1684Z"
+                                        fill="#01E45C" />
+                                    <path
+                                        d="M1.93946 23.5707H10.2096C11.2807 23.5707 12.149 22.7013 12.149 21.6289C12.149 20.5564 11.2807 19.687 10.2096 19.687H1.93946C0.86836 19.687 0 20.5564 0 21.6289C0 22.7013 0.86836 23.5707 1.93946 23.5707Z"
+                                        fill="#2B2B2B" />
+                                    <path
+                                        d="M1.93946 31.8559H13.3109C14.382 31.8559 15.2503 30.9864 15.2503 29.914C15.2503 28.8416 14.382 27.9722 13.3109 27.9722H1.93946C0.86836 27.9722 0 28.8416 0 29.914C0 30.9864 0.86836 31.8559 1.93946 31.8559Z"
+                                        fill="#2B2B2B" />
+                                    <path
+                                        d="M1.93946 40.1412H21.5811C22.6522 40.1412 23.5206 39.2717 23.5206 38.1993C23.5206 37.1269 22.6522 36.2574 21.5811 36.2574H1.93946C0.86836 36.2574 0 37.1269 0 38.1993C0 39.2717 0.86836 40.1412 1.93946 40.1412Z"
+                                        fill="#2B2B2B" />
+                                    <path
+                                        d="M44.3242 44.5427H1.93946C0.86836 44.5427 0 45.4122 0 46.4846C0 47.557 0.86836 48.4264 1.93946 48.4264H44.3242C45.3953 48.4264 46.2637 47.557 46.2637 46.4846C46.2637 45.4122 45.3953 44.5427 44.3242 44.5427Z"
+                                        fill="#2B2B2B" />
+                                </svg>
+                            </div>
+                            <div class="card__title">Актуальная <br> информация</div>
+                        </div>
+                        <div class="card__description">
+                            Мы регулярно обновляем наши базы данных,
+                            чтобы предоставлять вам только самую свежую информацию
+                            о новых курсах, старте обучения, скидках и предложениях от онлайн-школ
+                        </div>
+                    </div>
+                    <div class="benefits-section_card card">
+                        <div class="card__header">
+                            <div class="card__icon">
+                                <svg width="54" height="50" viewBox="0 0 54 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_153_2931)">
+                                        <path
+                                            d="M4.40989 1.9029L4.40989 4.25996C2.19517 5.04547 0.60409 7.16061 0.60409 9.64135C0.60409 12.1221 2.19517 14.2372 4.40989 15.0228L4.40989 47.8262C4.40989 48.8771 5.26188 49.7291 6.31279 49.7291C7.36369 49.7291 8.21568 48.8771 8.21568 47.8262L8.21569 15.0228C10.4304 14.2372 12.0215 12.1221 12.0215 9.64135C12.0215 7.16061 10.4304 5.04547 8.21569 4.25996L8.21569 1.9029C8.21569 0.851991 7.3637 -2.03598e-07 6.31279 -2.49535e-07C5.26188 -2.95472e-07 4.40989 0.851991 4.40989 1.9029ZM8.21569 9.64135C8.21569 10.6906 7.36205 11.5443 6.31279 11.5443C5.26353 11.5443 4.40989 10.6906 4.40989 9.64135C4.40989 8.5921 5.26353 7.73846 6.31279 7.73846C7.36205 7.73846 8.21569 8.5921 8.21569 9.64135Z"
+                                            fill="#2B2B2B" />
+                                        <path
+                                            d="M24.7898 47.8262L24.7898 45.4692C22.5751 44.6837 20.984 42.5685 20.984 40.0878C20.984 37.607 22.5751 35.4919 24.7898 34.7064L24.7898 1.90293C24.7898 0.852024 25.6418 3.0813e-05 26.6927 3.07671e-05C27.7436 3.07212e-05 28.5956 0.852024 28.5956 1.90293L28.5956 34.7064C30.8103 35.4919 32.4014 37.607 32.4014 40.0878C32.4014 42.5685 30.8103 44.6837 28.5956 45.4692L28.5956 47.8262C28.5956 48.8771 27.7436 49.7291 26.6927 49.7291C25.6418 49.7291 24.7898 48.8771 24.7898 47.8262ZM28.5956 40.0878C28.5956 39.0385 27.7419 38.1849 26.6927 38.1849C25.6434 38.1849 24.7898 39.0385 24.7898 40.0878C24.7898 41.137 25.6434 41.9907 26.6927 41.9907C27.7419 41.9907 28.5956 41.137 28.5956 40.0878Z"
+                                            fill="#01E45C" />
+                                        <path
+                                            d="M45.1706 1.9029L45.1706 4.25996C42.9559 5.04547 41.3648 7.16061 41.3648 9.64135C41.3648 12.1221 42.9559 14.2372 45.1706 15.0228L45.1706 47.8262C45.1706 48.8771 46.0226 49.7291 47.0735 49.7291C48.1244 49.7291 48.9764 48.8771 48.9764 47.8262L48.9764 15.0228C51.1911 14.2372 52.7822 12.1221 52.7822 9.64135C52.7822 7.16061 51.1911 5.04547 48.9764 4.25996L48.9764 1.9029C48.9764 0.851991 48.1244 -2.03598e-07 47.0735 -2.49535e-07C46.0226 -2.95472e-07 45.1706 0.851991 45.1706 1.9029ZM48.9764 9.64135C48.9764 10.6906 48.1228 11.5443 47.0735 11.5443C46.0243 11.5443 45.1706 10.6906 45.1706 9.64135C45.1706 8.5921 46.0243 7.73846 47.0735 7.73846C48.1228 7.73846 48.9764 8.5921 48.9764 9.64135Z"
+                                            fill="#2B2B2B" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_153_2931">
+                                            <rect width="53.2609" height="50" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card__title">Скорость <br> поиска</div>
+                        </div>
+                        <div class="card__description">
+                            Агрегатор курсов создан для экономии вашего времени.
+                            Вы можете с легкостью найти подходящий курс в нашем каталоге
+                            по различным фильтрам
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COURSES SECTION -->
+        <section class="courses-section section section-gray">
+            <div class="courses-section__container">
+                <h2 class="section__title">Направления курсов</h2>
+                <div tabs class="courses-section__tabs tabs">
+                    <nav class="tabs__menu menu">
+                        <ul class="menu__list">
+                            <li data-for="tab-1" class="menu__item active">Программирование</li>
+                            <li data-for="tab-2" class="menu__item">Маркетинг</li>
+                            <li data-for="tab-3" class="menu__item">Дизайн</li>
+                            <li data-for="tab-4" class="menu__item">Аналитика</li>
+                            <li data-for="tab-5" class="menu__item">Финансы</li>
+                            <li data-for="tab-6" class="menu__item">Управление</li>
+                            <li data-for="tab-6" class="menu__item">Контет-маркетинг</li>
+                        </ul>
+                    </nav>
+                    <section class="tabs__content">
+                        <ul>
+                            <li data-tab="tab-1" class="tabs__item item">
+                                <ul class="item__list">
+                                    <li class="item__item"><a href="" class="item__link">Все курсы по программированию</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Python-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Web-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Мобильная разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">JavaScript-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Java-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка игр</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Создание сайтов</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Системное администрирование</a></li>
+                                    <li class="item__item"><a href="" class="item__link">QA-тестирование</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Android-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Управление разработкой и IT</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Frontend-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка игр на Unity</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на C#</a></li>
+                                    <li class="item__item"><a href="" class="item__link">PHP-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">DevOps</a></li>
+                                    <li class="item__item"><a href="" class="item__link">IOS-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Верстка на HTML/CSS</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на C++</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка игр на Unreal Engine</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на Kotlin</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Информационная безопасность</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Golang-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на Swift</a></li>
+                                    <li class="item__item"><a href="" class="item__link">1C-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">VR/AR разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Фреймворк Laravel</a></li>
+                                </ul>
+                            </li>
+                            <li data-tab="tab-2" class="tabs__item item">
+                                <ul class="item__list">
+                                    <li class="item__item"><a href="" class="item__link">Web-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Мобильная разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">JavaScript-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Java-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка игр</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Создание сайтов</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Системное администрирование</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка игр на Unity</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на C#</a></li>
+                                    <li class="item__item"><a href="" class="item__link">PHP-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">DevOps</a></li>
+                                    <li class="item__item"><a href="" class="item__link">IOS-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Верстка на HTML/CSS</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на C++</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка игр на Unreal Engine</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на Kotlin</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Информационная безопасность</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Golang-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Разработка на Swift</a></li>
+                                    <li class="item__item"><a href="" class="item__link">1C-разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">VR/AR разработка</a></li>
+                                    <li class="item__item"><a href="" class="item__link">Фреймворк Laravel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
     @@include('html/_footer.html', {})
     <script src="js/app.min.js"></script>
 </body>
+
 </html>
