@@ -7,12 +7,19 @@ functions.isWebp();
 functions.menu();
 
 // Accordions
-//flsFunctions.accordions()
+//functions.accordions()
 
 // Modals
-//flsFunctions.modals()
+//functions.modals()
 
 // Ranges
 //functions.ranges();
 
+// Tabs
 functions.tabs();
+
+// Slider (enable styles in 'html/_style.html' and script in 'html/_js.html')
+//functions.slider('#slider');
+
+// Transfers
+functions.transfers();

@@ -1,4 +1,5 @@
 "use strict";
+// WEBP
 export const isWebp = () => {
     const testWebP = (callback) => {
         let webP = new Image();
@@ -13,22 +14,16 @@ export const isWebp = () => {
     });
 }
 
+// MENU
 export const menu = () => {
     document.querySelector('[menu-btn]').addEventListener('click', () => {
         document.querySelector('[menu-list]').classList.toggle('active');
         document.querySelector('[menu-btn]').classList.toggle('active');
     })
-
-    document.querySelectorAll('[search-btn]').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            document.querySelector('[search]').classList.toggle('active');
-            e.preventDefault();
-        })
-    })
 }
 
+// ACCORDIONS
 export const accordions = () => {
-    
     document.querySelectorAll('[accordions][multiple]').forEach(item => {
         item.querySelectorAll('[accordion]').forEach(accordion => {
             accordion.querySelector('button').addEventListener('click', () => {
@@ -67,6 +62,7 @@ export const accordions = () => {
     }
 }
 
+// MODALS
 export const modals = () => {
     document.querySelectorAll('a[href*="#"][href*="modal"]').forEach((link) => {
         link.addEventListener('click', (e) => {
@@ -88,6 +84,7 @@ export const modals = () => {
     });
 }
 
+// RANGES
 export const ranges = () => {
     document.querySelectorAll('[ranges]').forEach(range => {
         const slider_min = range.querySelector("[data-range='min']");
@@ -120,36 +117,77 @@ export const ranges = () => {
     })
 }
 
+// TABS
 export const tabs = () => {
-    document.querySelectorAll('[tabs]').forEach(tab => {
-        const menus = tab.querySelectorAll('[data-for]');
-        const tabs = tab.querySelectorAll('[data-tab]');
+    document.querySelectorAll('[tabs]').forEach(item => {
+        const tabs = item.querySelectorAll('[data-for]');
+        const contents = item.querySelectorAll('[data-tab]');
 
-        menus.forEach(menu_item => {
-            if (menu_item.classList.contains('active')) {
-                tabs.forEach(tab_item => {
-                    tab_item.hidden = !(menu_item.dataset.for === tab_item.dataset.tab);
-                })
-            }
-        })
+        contents.forEach(content => {
+            tabs.forEach(tab => {
+                !tab.classList.contains('active') 
+                    && content.dataset.tab === tab.dataset.for
+                    ? content.hidden = true : '';
+            })
+        });
 
-        menus.forEach(menu => {
-            menu.addEventListener('click', () => {
-                menus.forEach(menu_item => {
-                    if (menu_item === menu) {
-                        menu.classList.add('active');
-                    } else {
-                        menu_item.classList.remove('active');
-                    }
-                })
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
                 tabs.forEach(tab_item => {
-                    if (tab_item.dataset.tab === menu.dataset.for) {
-                        tab_item.hidden = false;
-                    } else {
-                        tab_item.hidden = true;
-                    }
+                    tab_item === tab 
+                        ? tab_item.classList.add("active") 
+                        : tab_item.classList.remove('active');
+                })
+
+                contents.forEach(content => {
+                    content.hidden = tab.dataset.for === content.dataset.tab ? false : true;
                 })
             })
         })
+    })
+}
+
+// SLIDER
+export const slider = (id) => {
+    new Swiper('.swiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+    });
+}
+
+// TRANSFERS
+export const transfers = () => {
+    let items = [];
+
+    const handle = (query, item) => {
+        query.matches ? item.target.append(item.item) : item.parent.append(item.item);
+    }
+
+    document.querySelectorAll('[data-transfer]').forEach(item => {
+        items.push({
+            item: item,
+            parent: item.parentElement,
+            target: document.querySelector(`#${item.dataset.transfer.split(', ')[0]}`),
+            media: {
+                query: item.dataset.transfer.split(', ')[1],
+                value: item.dataset.transfer.split(', ')[2]
+            },
+        })
+    })
+
+    items.forEach(item => {
+        const query = window.matchMedia(`(${item.media.query}-width: ${item.media.value}px)`);
+        query.addListener(() => {
+            handle(query, item);
+        })
+
+        handle(query, item);
     })
 }

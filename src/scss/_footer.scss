@@ -1,7 +1,23 @@
 .footer {
     background-color: #000000;
+    &__header {
+        display: none;
+        @media (max-width: $md2) {
+            display: block;
+        }
+        .footer__container {
+            padding: 0 rem($containerPadding);
+            padding-top: rem(50);
+            height: rem(56);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
     &__content {
-        padding: rem(50);
+        .footer__container {
+            padding: rem(50) rem($containerPadding);
+        }
         border-bottom: rem(1) solid $gray3;
         .footer__menu {
             display: grid;
@@ -50,6 +66,19 @@
             justify-content: space-between;
             align-items: center;
         }
+    }
+    &__left, &__right {
+        display: flex;
+        align-items: center;
+        gap: rem(50);
+    }
+    &__link, &__link:visited {
+        font-family: 'FS Elliot Pro';
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: rem(15);
+        color: $gray2;
+        order: 2;
     }
     &__logo {
         font-family: 'FS Elliot Pro';
