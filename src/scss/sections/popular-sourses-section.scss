@@ -1,0 +1,180 @@
+.popular-sourses-section {
+    .item {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: rem(10);
+        }
+        &__card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(20);
+            padding: rem(15) rem(50);
+            box-shadow: 0px 9px 15px rgba(226, 226, 226, 0.25);
+            border-radius: rem(5);
+            border: rem(1) solid $gray6;
+            @media (max-width: $md2) {
+                padding: rem(15) rem(20);
+            }
+            @media (max-width: $md3) {
+                box-shadow: none;
+                padding: rem(20) rem(30);
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .card {
+                &__item {
+                    max-width: rem(140);
+                    flex-basis: rem(140);
+                    @media (max-width: $md3) {
+                        flex-basis: 46%;
+                        width: 46%;
+                        max-width: 46%;
+                    }
+                }
+                &__job {
+                    font-family: 'Lisboa';
+                    font-weight: 700;
+                    font-size: rem(16);
+                    line-height: rem(24);
+                    @media (max-width: $md3) {
+                        max-width: 100%;
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
+                }
+                &__school {
+                    .school {
+                        &__name, &__mark, &__reviews {
+                            font-family: 'FS Elliot Pro';
+                            font-weight: 700;
+                            font-size: rem(18);
+                            line-height: rem(27);
+                        }
+                        &__icon {
+                            margin-right: rem(4);
+                        }
+                        &__reviews {
+                            line-height: rem(16);
+                            font-size: rem(12);
+                            color: $gray2;
+                        }
+                    }
+                }
+                &__price {
+                    .price {
+                        &__discount {
+                            font-family: 'FS Elliot Pro';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: rem(12);
+                            text-decoration-line: line-through;
+                            color: $gray2;
+                        }
+                        &__price {
+                            font-family: 'FS Elliot Pro';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: rem(18);
+                            line-height: rem(27);
+                        }
+                        &__monthly {
+                            font-family: 'FS Elliot Pro';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: rem(12);
+                            line-height: rem(16);
+                            color: $green;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                &__time {
+                    display: flex;
+                    align-items: center;
+                    gap: rem(15);
+                    font-family: 'FS Elliot Pro';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: rem(12);
+                    line-height: rem(14);
+                    @media (max-width: $md2) {
+                        flex-direction: column;
+                    }
+                    @media (max-width: $md3) {
+                        flex-direction: row;
+                        align-items: flex-start;
+                    }
+                }
+                &__extra {
+                    .extra {
+                        &__label {
+                            font-family: 'FS Elliot Pro';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: rem(12);
+                            line-height: rem(24);
+                        }
+                        &__item {
+                            display: flex;
+                            align-items: center;
+                            gap: rem(18);
+                        }
+                    }
+                }
+                &__btns {
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem(8);
+                    @media (max-width: $md3) {
+                        width: 100%;
+                        max-width: 100%;
+                        flex-basis: 100%;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                    }
+                    .btn {
+                        @media (max-width: $md3) {
+                            width: 48%;
+                        }
+                    }
+                    .btn-black {
+                        @media (max-width: $md2) {
+                            color: $gray7;
+                            background-color: transparent;
+                            border: 1px solid $gray7;
+                        }
+                        @media (max-width: $md3) {
+                            color: $black;
+                            background-color: transparent;
+                            border: 1px solid $black;
+                        }
+                    }
+                }
+                &__btn {
+                    font-family: 'FS Elliot Pro';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: rem(10);
+                    line-height: rem(24);
+                    color: $gray7;
+                    display: flex;
+                    align-items: center;
+                    gap: rem(10);
+                }
+            }
+        }
+    }
+    &__btn {
+        text-align: center;
+        padding: rem(25);
+        .btn {
+            height: rem(50);
+            width: rem(180);
+            margin: 0 auto;
+        }
+    }
+}

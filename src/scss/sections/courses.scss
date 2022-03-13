@@ -11,39 +11,24 @@
                 }
                 .menu {
                     &__list {
-                        @media (max-width: $md2) {
-                            display: flex;
-                            gap: rem(20);
-                            height: auto;
-                            padding: 0 rem(25);
-                            padding-bottom: rem(30);
-                            overflow-x: auto;
+                        @media (min-width: $md2) {
+                            display: block;
+                            padding: 0;
                         }
                     }
                     &__item {
-                        white-space: nowrap;
-                        cursor: pointer;
-                        display: flex;
-                        align-items: center;
-                        padding-left: rem(30);
-                        font-family: 'FS Elliot Pro';
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: rem(14);
-                        height: rem(48);
-                        @media (max-width: $md2) {
-                            font-weight: bold;
-                            padding-left: 0;
-                            padding: rem(12) rem(25);
+                        @media (min-width: $md2) {
+                            font-weight: normal;
+                            padding: rem(15);
+                            padding-left: rem(30);
                             height: auto;
                         }
                         &.active {
-                            font-weight: bold;
-                            background-color: $white;
-                            @media (max-width: $md2) {
-                                color: $white;
-                                background-color: $green;
-                                border-radius: rem(50);
+                            @media (min-width: $md2) {
+                                font-weight: bold;
+                                background-color: $white;
+                                color: $black;
+                                border-radius: 0;
                             }
                         }
                     }
@@ -57,13 +42,8 @@
             &__item {
                 .item {
                     &__list {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                    }
-                    &__item {
-                        min-width: rem(280);
-                        flex: 1;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(rem(260), 1fr));
                     }
                     &__link {
                         width: 100%;
@@ -75,11 +55,13 @@
                         font-style: normal;
                         font-weight: normal;
                         font-size: rem(14);
+                        line-height: rem(20);
                         padding: 0 rem(30);
                         &::after {
                             content: '';
                             width: rem(6);
                             height: rem(8);
+                            margin-left: rem(20);
                             background-image: url("data:image/svg+xml,%3Csvg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.22271 3.68784L1.66261 0.127804C1.58027 0.045398 1.47035 0 1.35315 0C1.23595 0 1.12603 0.045398 1.04369 0.127804L0.781512 0.389915C0.610911 0.560711 0.610911 0.838302 0.781512 1.00884L3.77102 3.99834L0.778195 6.99116C0.695854 7.07357 0.650391 7.18342 0.650391 7.30056C0.650391 7.41783 0.695854 7.52768 0.778195 7.61015L1.04037 7.8722C1.12278 7.9546 1.23263 8 1.34983 8C1.46703 8 1.57695 7.9546 1.65929 7.8722L5.22271 4.30891C5.30525 4.22624 5.35058 4.11587 5.35032 3.99854C5.35058 3.88075 5.30525 3.77044 5.22271 3.68784Z' fill='%23C4C4C4'/%3E%3C/svg%3E");
                             display: block;
                         }

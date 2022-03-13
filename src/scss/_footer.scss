@@ -22,7 +22,7 @@
         .footer__menu {
             display: grid;
             gap: rem(60);
-            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(rem(175), 1fr));
             .menu {
                 &__item {
                     .item {
@@ -52,6 +52,10 @@
                             letter-spacing: rem(0.2);
                             color: #FFFFFF;
                             opacity: .7;
+                            transition: opacity ease .2s;
+                            &:hover {
+                                opacity: 1;
+                            }
                         }
                     }
                 }

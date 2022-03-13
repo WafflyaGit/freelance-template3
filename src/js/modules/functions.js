@@ -150,6 +150,8 @@ export const tabs = () => {
 // SLIDER
 export const slider = (id) => {
     new Swiper('.swiper', {
+        spaceBetween: 16,
+        slidesPerView: 1,
         loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -159,6 +161,14 @@ export const slider = (id) => {
             el: '.swiper-pagination',
             clickable: true
         },
+        breakpoints: {
+            991.98: {
+                slidesPerView: 4,
+            },
+            767.98: {
+                slidesPerView: 2,
+            }
+        }
     });
 }
 

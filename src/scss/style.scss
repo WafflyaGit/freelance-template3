@@ -26,6 +26,9 @@ $gray2: #B5B5B5;
 $gray3: #363636;
 $gray4: #F8F8F8;
 $gray5: #7E7E7E;
+$gray6: #F0F0F0;
+$gray7: #8C8C8C;
+$gray8: #F2F2F2;
 
 body {
     font-size: $fontSize;
@@ -73,6 +76,8 @@ footer {
 @import "sections/main.scss";
 @import "sections/benefits.scss";
 @import "sections/courses.scss";
+@import "sections/popular-sourses-section.scss";
+@import "sections/blog.scss";
 
 // Plugins
 //@import "base/accordions.scss";

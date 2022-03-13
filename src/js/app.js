@@ -19,7 +19,7 @@ functions.menu();
 functions.tabs();
 
 // Slider (enable styles in 'html/_style.html' and script in 'html/_js.html')
-//functions.slider('#slider');
+functions.slider('#slider');
 
 // Transfers
 functions.transfers();
