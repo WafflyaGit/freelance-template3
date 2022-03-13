@@ -1,7 +1,9 @@
 $headerHeight: rem(70);
 
 .header {
-    z-index: 1;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
     background-color: $white;
     border-bottom: 1px solid $gray;
     &__container {
@@ -33,6 +35,7 @@ $headerHeight: rem(70);
                 flex-direction: column;
                 padding-top: rem(80);
                 padding-left: rem(15);
+                padding-bottom: rem(30);
                 z-index: 1;
                 position: fixed;
                 top: -100%;

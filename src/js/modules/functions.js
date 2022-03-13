@@ -20,6 +20,11 @@ export const menu = () => {
         document.querySelector('[menu-list]').classList.toggle('active');
         document.querySelector('[menu-btn]').classList.toggle('active');
     })
+    document.querySelectorAll('[search-btn]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelector('[search]').classList.toggle('active');
+        })
+    })
 }
 
 // ACCORDIONS
