@@ -23,3 +23,15 @@ functions.slider('#slider');
 
 // Transfers
 functions.transfers();
+
+const query = window.matchMedia('(max-width: 767.98px)')
+
+const handle = (e) => {
+    if (e.matches) {
+        functions.accordions();
+    }
+}
+
+query.addListener(handle);
+
+handle(query);

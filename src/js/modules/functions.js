@@ -26,7 +26,7 @@ export const menu = () => {
 export const accordions = () => {
     document.querySelectorAll('[accordions][multiple]').forEach(item => {
         item.querySelectorAll('[accordion]').forEach(accordion => {
-            accordion.querySelector('button').addEventListener('click', () => {
+            accordion.querySelector('[btn]').addEventListener('click', () => {
                 toggle(accordion, accordion.querySelector('[content]'))
             })
         })
@@ -35,7 +35,7 @@ export const accordions = () => {
     document.querySelectorAll('[accordions][single]').forEach(item => {
         const accordions = item.querySelectorAll('[accordion]');
         accordions.forEach(accordion => {
-            accordion.querySelector('button').addEventListener('click', () => {
+            accordion.querySelector('[btn]').addEventListener('click', () => {
                 accordions.forEach(select => {
                     accordion == select 
                         ? toggle(select, select.querySelector('[content]')) 
