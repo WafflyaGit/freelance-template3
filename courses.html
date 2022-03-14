@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220314180159"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220314180159">
+    <title>Courses</title>
+</head>
+<body>
+    <div class="header">
+    <header class="header__container">
+        <a href="#" class="header__logo">
+            Logo
+        </a>
+        <nav class="header__menu menu">
+            <ul menu-list class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">Курсы</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Школы</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Отзывы о школах</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Акции школ</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+            </ul>
+            <ul class="menu__navigation">
+                <li class="menu__item">
+                    <a href="" class="menu__transfer">
+                        <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27.7073 7.29291L20.7072 0.292783C20.3166 -0.097692 19.6834 -0.0975747 19.2929 0.293017C19.1055 0.48052 19.0002 0.734704 19.0001 0.999845V3.99989H12C11.4477 3.99989 10.9999 4.44762 10.9999 4.99993C10.9999 5.55224 11.4477 5.99996 12 5.99996H20.0002C20.5525 5.99996 21.0002 5.55224 21.0002 4.99993V3.41383L25.5863 7.99992L21.0002 12.586V11C21.0002 10.4477 20.5525 9.99993 20.0002 9.99993H8.99993V6.99988C8.99981 6.44757 8.55198 5.99996 7.99972 6.00008C7.73464 6.00014 7.4804 6.10543 7.29289 6.29288L0.292813 13.293C-0.0976042 13.6835 -0.0976042 14.3165 0.292813 14.707L7.29295 21.7072C7.48045 21.8947 7.73476 22.0001 7.99995 22.0002C8.13138 22.0006 8.26164 21.9748 8.38293 21.9242C8.75653 21.7693 9.00005 21.4046 8.99993 21.0001V18.0001H16.0001C16.5524 18.0001 17.0001 17.5524 17.0001 17.0001C17.0001 16.4478 16.5524 16 16.0001 16H7.99995C7.44764 16 6.99992 16.4478 6.99992 17.0001V18.5861L2.41383 14L6.99992 9.41393V11C6.99992 11.5523 7.44764 12 7.99995 12H19.0001V15C19.0002 15.5524 19.4481 16 20.0003 15.9999C20.2654 15.9998 20.5197 15.8945 20.7072 15.7071L27.7073 8.70692C28.0977 8.31639 28.0977 7.68339 27.7073 7.29291Z"
+                                fill="#2B2B2B" />
+                        </svg>
+                        <span class="menu__count">3</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <button search-btn class="menu__btn-search">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_104_20)">
+                                <path
+                                    d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
+                                    fill="#B5B5B5" />
+                                <path
+                                    d="M19.762 18.6121L15.1007 13.9509C14.7831 13.6332 14.2687 13.6332 13.9511 13.9509C13.6335 14.2682 13.6335 14.7831 13.9511 15.1005L18.6124 19.7617C18.7712 19.9205 18.9791 19.9999 19.1872 19.9999C19.395 19.9999 19.6032 19.9205 19.762 19.7617C20.0796 19.4444 20.0796 18.9295 19.762 18.6121Z"
+                                    fill="#B5B5B5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_104_20">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <form search class="menu__input" action="">
+                        <button type="submit">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_104_20)">
+                                    <path
+                                        d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
+                                        fill="#B5B5B5" />
+                                    <path
+                                        d="M19.762 18.6121L15.1007 13.9509C14.7831 13.6332 14.2687 13.6332 13.9511 13.9509C13.6335 14.2682 13.6335 14.7831 13.9511 15.1005L18.6124 19.7617C18.7712 19.9205 18.9791 19.9999 19.1872 19.9999C19.395 19.9999 19.6032 19.9205 19.762 19.7617C20.0796 19.4444 20.0796 18.9295 19.762 18.6121Z"
+                                        fill="#B5B5B5" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_104_20">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <input type="text" placeholder="Искать курсы">
+                        <svg class="menu__cross" search-btn width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 1.64973L12.3503 0L6.99998 5.35025L1.64973 0L0 1.64973L5.35025 6.99998L0 12.3503L1.64973 14L6.99998 8.64975L12.3502 14L14 12.3503L8.64975 6.99998L14 1.64973Z"
+                                fill="#2B2B2B" />
+                        </svg>
+                    </form>
+                </li>
+                <li class="menu__item">
+                    <div menu-btn class="menu__btn-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+    <main>
+        <div class="page__header">
+            
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer__header">
+        <div id="footer__container" class="footer__container"></div>
+    </div>
+    <div class="footer__content">
+        <div accordions single class="footer__container">
+            <ul class="footer__menu menu">
+                <li accordion class="menu__item item">
+                    <div btn class="item__title">Категории</div>
+                    <ul content class="item__list">
+                        <li class="item__item">
+                            <a class="item__link" href="">Программирование</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Маркетинг</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Дизайн</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Управление</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Контент-маркетинг</a>
+                        </li>
+                    </ul>
+                </li>
+                <li accordion class="menu__item item">
+                    <div btn class="item__title">Школы</div>
+                    <ul content class="item__list">
+                        <li class="item__item">
+                            <a class="item__link" href="">Skillbox</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Geekbrains</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Нетология</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Skillfactory</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Convertmonster</a>
+                        </li>
+                    </ul>
+                </li>
+                <li accordion class="menu__item item">
+                    <div btn class="item__title">Отзывы о школах</div>
+                    <ul content class="item__list">
+                        <li class="item__item">
+                            <a class="item__link" href="">Отзывы о Skillbox</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Отзывы о Geekbrains</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Отзывы о Нетология</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Отзывы о Skillfactory</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Отзывы о Convertmonster</a>
+                        </li>
+                    </ul>
+                </li>
+                <li accordion class="menu__item item">
+                    <div btn class="item__title">Курсы</div>
+                    <ul content class="item__list">
+                        <li class="item__item">
+                            <a class="item__link" href="">С дипломом</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">С трудоустройством</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Платные</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Бесплатные</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Ближайшие по дате старта</a>
+                        </li>
+                    </ul>
+                </li>
+                <li accordion class="menu__item item">
+                    <div btn class="item__title">Level сложности</div>
+                    <ul content class="item__list">
+                        <li class="item__item">
+                            <a class="item__link" href="">Начальный</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Средний</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Профессиональный</a>
+                        </li>
+                        <li class="item__item">
+                            <a class="item__link" href="">Для детей</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__footer">
+        <div class="footer__container">
+            <div class="footer__left">
+                <div data-transfer="footer__container, max, 991.98" class="footer__logo">
+                    LOGO
+                </div>
+                <a href="" class="footer__link">
+                    @ Made by Egor Kalashnykov
+                </a>
+            </div>
+            <div class="footer__right">
+                <ul data-transfer="footer__container, max, 991.98" class="footer__links">
+                    <li class="footer__link">
+                        <a href="">
+                            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.8752 7.13084C13.8376 7.06783 13.6048 6.56205 12.4847 5.52247C11.3122 4.43389 11.4697 4.61065 12.882 2.72838C13.7422 1.58205 14.0861 0.881996 13.9785 0.582724C13.8761 0.297452 13.2434 0.372708 13.2434 0.372708L11.1398 0.384959C11.1398 0.384959 10.984 0.363957 10.8676 0.433088C10.7547 0.501343 10.6821 0.658854 10.6821 0.658854C10.6821 0.658854 10.3487 1.54617 9.90418 2.30048C8.96698 3.89222 8.59158 3.97623 8.43845 3.87735C8.08229 3.6472 8.17155 2.95153 8.17155 2.45799C8.17155 0.915249 8.40519 0.272075 7.71564 0.105813C7.48637 0.0506839 7.31836 0.0139312 6.73294 0.00780571C5.98214 -6.98841e-05 5.34597 0.0104309 4.98631 0.186319C4.74655 0.303578 4.56191 0.565223 4.67479 0.580099C4.81393 0.598475 5.12895 0.66498 5.29609 0.892497C5.51223 1.18564 5.50435 1.84544 5.50435 1.84544C5.50435 1.84544 5.62861 3.6612 5.21471 3.88697C4.93031 4.04186 4.54091 3.72596 3.70522 2.28123C3.27731 1.5418 2.95354 0.72361 2.95354 0.72361C2.95354 0.72361 2.89141 0.571348 2.78028 0.489967C2.64552 0.391085 2.4565 0.359582 2.4565 0.359582L0.456104 0.371833C0.456104 0.371833 0.155957 0.380584 0.0456987 0.510969C-0.0523085 0.627352 0.0378231 0.86712 0.0378231 0.86712C0.0378231 0.86712 1.60419 4.53102 3.37707 6.37828C5.00382 8.07153 6.8502 7.9604 6.8502 7.9604H7.68676C7.68676 7.9604 7.93966 7.9324 8.06829 7.79326C8.1873 7.6655 8.18293 7.42574 8.18293 7.42574C8.18293 7.42574 8.1663 6.30303 8.68784 6.13764C9.2015 5.97488 9.8613 7.22272 10.5605 7.70313C11.089 8.06628 11.4907 7.98665 11.4907 7.98665L13.3607 7.9604C13.3607 7.9604 14.339 7.90002 13.8752 7.13084Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">
+                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.49335 7.85566L5.26177 11.113C5.5931 11.113 5.7366 10.9707 5.90869 10.7997L7.4621 9.31516L10.6809 11.6724C11.2713 12.0014 11.6872 11.8282 11.8464 11.1293L13.9593 1.22899L13.9599 1.22841C14.1471 0.35574 13.6443 0.0144904 13.0691 0.228574L0.649937 4.98332C-0.197646 5.31232 -0.184813 5.78482 0.505854 5.99891L3.68094 6.98649L11.056 2.37174C11.4031 2.14191 11.7187 2.26907 11.4591 2.49891L5.49335 7.85566Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.625 0H4.375C1.95913 0 0 1.95913 0 4.375V9.625C0 12.0409 1.95913 14 4.375 14H9.625C12.0409 14 14 12.0409 14 9.625V4.375C14 1.95913 12.0409 0 9.625 0ZM12.6875 9.625C12.6875 11.3138 11.3138 12.6875 9.625 12.6875H4.375C2.68625 12.6875 1.3125 11.3138 1.3125 9.625V4.375C1.3125 2.68625 2.68625 1.3125 4.375 1.3125H9.625C11.3138 1.3125 12.6875 2.68625 12.6875 4.375V9.625Z"
+                                    fill="white" />
+                                <path
+                                    d="M7 3.5C5.06712 3.5 3.5 5.06712 3.5 7C3.5 8.93288 5.06712 10.5 7 10.5C8.93288 10.5 10.5 8.93288 10.5 7C10.5 5.06712 8.93288 3.5 7 3.5ZM7 9.1875C5.79425 9.1875 4.8125 8.20575 4.8125 7C4.8125 5.79338 5.79425 4.8125 7 4.8125C8.20575 4.8125 9.1875 5.79338 9.1875 7C9.1875 8.20575 8.20575 9.1875 7 9.1875Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.7623 3.70387C11.0198 3.70387 11.2286 3.49506 11.2286 3.23749C11.2286 2.97992 11.0198 2.77112 10.7623 2.77112C10.5047 2.77112 10.2959 2.97992 10.2959 3.23749C10.2959 3.49506 10.5047 3.70387 10.7623 3.70387Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">
+                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.2852 1.71944C13.134 1.15716 12.6906 0.713921 12.1284 0.562515C11.1014 0.281494 6.993 0.281494 6.993 0.281494C6.993 0.281494 2.88479 0.281494 1.85772 0.551861C1.30633 0.703106 0.852196 1.15724 0.700951 1.71944C0.430664 2.74644 0.430664 4.87629 0.430664 4.87629C0.430664 4.87629 0.430664 7.01687 0.700951 8.03313C0.852356 8.59533 1.29552 9.03857 1.8578 9.18997C2.89561 9.47108 6.99316 9.47108 6.99316 9.47108C6.99316 9.47108 11.1014 9.47108 12.1284 9.20071C12.6907 9.04938 13.134 8.60614 13.2854 8.04394C13.5556 7.01687 13.5556 4.8871 13.5556 4.8871C13.5556 4.8871 13.5664 2.74644 13.2852 1.71944ZM5.68499 6.84391V2.90866L9.1013 4.87629L5.68499 6.84391Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__link">
+                        <a href="">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00428 2.7017C2.00428 2.61443 2.0164 2.42596 2.04064 2.13748C2.0667 1.8484 2.17578 1.54599 2.37153 1.22843C2.56546 0.912082 2.87999 0.627852 3.31755 0.376347C3.75329 0.126055 4.38296 0 5.20474 0H7.51979V2.52292H5.82472C5.65684 2.52292 5.50049 2.58595 5.35928 2.71019C5.21929 2.83442 5.14717 2.9526 5.14717 3.06229V4.63192H7.51919C7.49434 4.93918 7.46707 5.23796 7.43555 5.52643L7.34162 6.28882C7.30405 6.54638 7.26587 6.78516 7.22829 7.00515H5.1302V14H2.00428V7.00455H0.479492V4.63192H2.00428V2.7017Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="footer__link rights">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220314180159"></script>
+    <script src="js/app.min.js?_v=20220314180159"></script>
+</body>
